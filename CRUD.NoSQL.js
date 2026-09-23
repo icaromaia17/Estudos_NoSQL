@@ -1,19 +1,14 @@
 // CRUD - MONGODB
 
-
 // ==================================================
 // CREATE
 // ==================================================
-
-
-// BANCO DE DADOS
 
 // Exibir os bancos de dados
 show databases;
 
 // Criar/selecionar banco de dados
 use loja_informatica;
-
 
 // COLLECTIONS
 
@@ -22,7 +17,6 @@ db.createCollection("cliente");
 
 // Mostrar todas as collections
 show collections;
-
 
 // INSERÇÃO DE DOCUMENTOS
 
@@ -50,11 +44,9 @@ db.cliente.insertMany([
     { "nome": "Noé" }
 ]);
 
-
 // ==================================================
 // READ
 // ==================================================
-
 
 // CONSULTA DE DOCUMENTOS
 
@@ -71,11 +63,14 @@ db.cliente.find({
     "_id": ObjectId("6a7bbab007ff2cf8649f68a9")
 });
 
+// Buscar apenas o primeiro documento correspondente
+db.cliente.findOne({
+    "nome": "José"
+});
 
 // ==================================================
 // UPDATE
 // ==================================================
-
 
 // ATUALIZAÇÃO DE DOCUMENTOS
 
@@ -96,3 +91,29 @@ db.cliente.updateOne(
         }
     }
 );
+
+// Atualizar vários documentos de uma vez
+db.cliente.updateMany(
+    { "endereco.logradouro": "sossego" },
+    { $set: { "endereco.cidade": "Salvador" } }
+);
+
+// Substituir o documento inteiro (exceto o _id)
+db.cliente.replaceOne(
+    { "nome": "Brenno" },
+    { "nome": "Brenno", "idade": 11, "status": "ativo" }
+);
+
+// ==================================================
+// DELETE
+// ==================================================
+
+// Remover um documento
+db.cliente.deleteOne({
+    "nome": "José"
+});
+
+// Remover vários documentos
+db.cliente.deleteMany({
+    "status": "inativo"
+});
