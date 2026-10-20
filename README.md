@@ -8,10 +8,11 @@ Repositório da disciplina de NoSQL. Uso para guardar as anotações das aulas, 
 
 | Arquivo | Tipo | Descrição |
 |---|---|---|
-| [`CRUD.NoSQL.js`](CRUD.NoSQL.js) | Código | Comandos do MongoDB reunidos em um só arquivo: banco, collections, CRUD e relacionamentos |
-| [`atividade_pratica.js`](atividade_pratica.js) | Exercícios | Atividade "Antes e Depois" com o banco `store` e a collection `customers`, mais a seção de desafio |
-| [`JAVA_SpringBoot.md`](JAVA_SpringBoot.md) | Anotações | API REST com Java e Spring Boot: conceitos, camadas e CRUD completo |
 | [`imagens/`](imagens) | Imagens | Imagens usadas nas anotações |
+| [`CRUD.NoSQL.js`](CRUD.NoSQL.js) | Código | Comandos do MongoDB reunidos em um só arquivo: banco, collections e CRUD |
+| [`JAVA_SpringBoot.md`](JAVA_SpringBoot.md) | Anotações | API REST com Java e Spring Boot: conceitos, camadas e CRUD completo |
+| [`Relacionamentos_NoSQL.js`](Relacionamentos_NoSQL.js) | Código | Relacionamentos no MongoDB: one-to-one, one-to-many e many-to-many, embarcados e por referência |
+| [`atividade_pratica.js`](atividade_pratica.js) | Exercícios | Atividade "Antes e Depois" com o banco `store` e a collection `customers`, mais a seção de desafio |
 
 ---
 
@@ -19,11 +20,12 @@ Repositório da disciplina de NoSQL. Uso para guardar as anotações das aulas, 
 
 ```
 Estudos_NoSQL
-├── README.md
+├── imagens/
 ├── CRUD.NoSQL.js
-├── atividade_pratica.js
 ├── JAVA_SpringBoot.md
-└── imagens/
+├── README.md
+├── Relacionamentos_NoSQL.js
+└── atividade_pratica.js
 ```
 
 ---
@@ -39,7 +41,19 @@ Estudos_NoSQL
 | **Read** | `find`, `findOne`, busca por campo e por `_id` |
 | **Update** | `updateOne`, `updateMany`, `replaceOne`, operador `$set` |
 | **Delete** | `deleteOne`, `deleteMany` |
-| **Relacionamentos** | one-to-one, one-to-many e many-to-many, cada um de forma **embarcada** e **por referência** |
+
+### Spring Boot (`JAVA_SpringBoot.md`)
+
+- O que é Spring Boot e uma API REST
+- Arquitetura em camadas: **Model**, **Controller**, **Service** e **Repository**
+- Injeção de dependência, JPA e banco H2
+- CRUD completo com `POST`, `GET`, `PUT` e `DELETE`
+- Status HTTP (`200`, `201`, `204` e `404`)
+
+### Relacionamentos (`Relacionamentos_NoSQL.js`)
+
+- One-to-one, one-to-many e many-to-many
+- Cada um de forma **embarcada** e **por referência**
 
 ### Atividade prática (`atividade_pratica.js`)
 
@@ -50,14 +64,6 @@ Dez exercícios no formato "Antes e Depois", cobrindo:
 - Inserção e remoção de documentos
 - Ordenação com `sort`
 - Desafio final com `countDocuments`, `limit`, `$in`, `$gte` e `$lte`
-
-### Spring Boot (`JAVA_SpringBoot.md`)
-
-- O que é Spring Boot e uma API REST
-- Arquitetura em camadas: **Model**, **Controller**, **Service** e **Repository**
-- Injeção de dependência, JPA e banco H2
-- CRUD completo com `POST`, `GET`, `PUT` e `DELETE`
-- Status HTTP (`200`, `201`, `204` e `404`)
 
 ---
 
