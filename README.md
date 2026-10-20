@@ -93,9 +93,3 @@ mongosh
 | Spring Data JPA e H2 | Acesso ao banco em memória, no exemplo da API |
 | Lombok | Redução de código repetitivo |
 | Postman | Teste das requisições HTTP |
-
----
-
-## 👤 Autor
-
-Feito por [icaromaia17](https://github.com/icaromaia17).
