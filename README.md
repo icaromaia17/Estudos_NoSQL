@@ -61,29 +61,6 @@ Dez exercícios no formato "Antes e Depois", cobrindo:
 
 ---
 
-##  Como usar
-
-### Comandos do MongoDB
-
-1. Instale o MongoDB e o `mongosh`.
-2. Abra o terminal interativo:
-
-```
-mongosh
-```
-
-3. Copie os comandos dos arquivos `.js` e cole no terminal, uma seção por vez.
-
-> O `_id` usado nos exemplos de busca é apenas ilustrativo. O seu será outro: copie o valor que o `insertOne` ou o `find()` devolver.
-
-### Exemplo em Spring Boot
-
-1. Gere o projeto no [Spring Initializr](https://start.spring.io) com Spring Web, Spring Data JPA, Lombok e H2 Database.
-2. Crie as classes de cada camada conforme o `JAVA_SpringBoot.md`.
-3. Execute a classe principal e teste as rotas no Postman, em `http://localhost:8080`.
-
----
-
 ##  Tecnologias
 
 | Tecnologia | Uso |
